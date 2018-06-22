@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html>
     <head>
         <title>An interactive web page</title>
@@ -15,16 +15,20 @@
         <h2>1. Color changer</h2>
         <button id="gray_button">Gray</button>
         <button id="blue_button">Blue</button>
+        <button id="pink_button">Pink</button>
         <div id="color_box" class="gray"></div>        
         <script>
             const gray_button = document.getElementById("gray_button");
             const blue_button = document.getElementById("blue_button");
-            const color_box = document.getElementById("color_box");
+            const pink_button = document.getElementById("pink_button");
             gray_button.onclick = function() {
                 color_box.className = "gray";
             };
             blue_button.onclick = function () {
                 color_box.className = "blue";
+            }
+            pink_button.onclick = function() {
+                color_box.className = "pink";
             }
             /* TODO 1
              *
@@ -43,6 +47,9 @@
             const counter_button = document.getElementById("counter_button");
             const countspan = document.getElementById("countspan");
             counter_button.onclick = function() {
+                count += 1;
+                console.log(countspan);
+                countspan.textContent = count
                 /* TODO 2
                  *
                  * Fill in this function so that it increments
@@ -60,6 +67,13 @@
         <script>
             const even_or_odd_button = document.getElementById("even_or_odd_button");
             even_or_odd_button.onclick = function() {
+                if (count%2 ==0){
+                alert("There are an even number of clicks")
+            } else {
+                alert("There are an odd number of clicks")
+            }
+
+
                 /* TODO 3
                  *
                  * Fill in this function so that it shows an
